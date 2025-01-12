@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "eashl"
+version = "1.0.0"
+description = "Repo for eashl stats"
+authors = ["Shashank Sundar <shashank.sundar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+run-app = "streamlit.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9.8,<3.10"
+black = "^24.10.0"
+streamlit = "^1.41.1"
+pydantic = "^2.10.4"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
