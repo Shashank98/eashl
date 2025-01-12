@@ -1,6 +1,6 @@
 import streamlit as st
 from eashl.util.scraper import load_member_data
-from eashl.util.helpers import generate_overview_df
+from eashl.util.helpers import generate_overview_df, generate_goals_df
 from eashl.schemas.member import MembersData
 
 st.set_page_config(page_title="EASHL Stats Hub | Simulator", layout="wide")
@@ -20,6 +20,11 @@ def render_data() -> None:
 
     st.header("Player Overview")
     st.table(overview_df)
+
+    goals_df = generate_goals_df(data)
+
+    st.header("Scoring Breakdown")
+    st.table(goals_df)
 
 
 render_data()
